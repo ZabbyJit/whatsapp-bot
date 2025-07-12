@@ -1,7 +1,7 @@
 {
-  "name": "whatsapp-restaurant-bot-mr-ari",
-  "version": "2.0.0",
-  "description": "An advanced WhatsApp bot for a restaurant using whatsapp-web.js",
+  "name": "whatsapp-bot-baileys",
+  "version": "1.0.0",
+  "description": "A stable WhatsApp bot using Baileys",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
@@ -9,7 +9,7 @@
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    "whatsapp-web.js": "^1.23.0",
+    "@whiskeysockets/baileys": "^6.7.2",
     "qrcode-terminal": "^0.12.0"
   }
 }
