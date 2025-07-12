@@ -5,7 +5,14 @@ console.log("Starting Mr. Ari, your restaurant bot...");
 
 const OWNER_NUMBER = '12345678900'; // <-- ⚠️ REPLACE WITH YOUR NUMBER
 
-const client = new Client({ authStrategy: new LocalAuth() });
+// --- FIX FOR RAILWAY DEPLOYMENT ---
+// The 'puppeteer' options are the special instructions Railway needs.
+const client = new Client({
+    authStrategy: new LocalAuth(),
+    puppeteer: {
+        args: ['--no-sandbox'],
+    }
+});
 
 client.on('qr', qr => {
     console.log('--- QR CODE DATA STRING ---');
@@ -49,10 +56,11 @@ client.on('message', async message => {
 
 function isRestaurantOpen() {
     const now = new Date();
-    const currentHour = now.getUTCHours();
+    // Remember to set the TZ variable in Railway to your timezone (e.g., America/New_York)
+    const currentHour = now.getHours(); 
     const openingHour = 11;
     const closingHour = 23;
-    console.log(`Time Check: Current UTC Hour is ${currentHour}.`);
+    console.log(`Time Check: Current Hour is ${currentHour}.`);
     return currentHour >= openingHour && currentHour < closingHour;
 }
 
