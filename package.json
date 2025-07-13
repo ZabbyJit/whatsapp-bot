@@ -8,6 +8,9 @@
   },
   "author": "Your Name",
   "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.2",
     "qrcode-terminal": "^0.12.0"
