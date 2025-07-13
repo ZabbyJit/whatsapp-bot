@@ -8,7 +8,7 @@ async function connectToWhatsApp() {
     console.log('[LOG] Starting connectToWhatsApp function...');
 
     console.log('[LOG] Awaiting useMultiFileAuthState...');
-    const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys');
+    const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys_v2');
     console.log('[LOG] useMultiFileAuthState completed.');
 
     console.log('[LOG] Creating socket with makeWASocket...');
