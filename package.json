@@ -4,7 +4,8 @@
   "description": "A stable WhatsApp bot using Baileys",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "heroku-postbuild": "npm install --legacy-peer-deps"
   },
   "author": "Your Name",
   "license": "ISC",
